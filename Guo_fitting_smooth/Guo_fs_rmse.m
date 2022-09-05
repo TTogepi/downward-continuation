@@ -21,10 +21,10 @@ end
 parfor i = 1 : M
 for j = 1 : M
     
-    tab_yi = mod(j,n);
-    tab_xi = 1 + floor(j / n);    
-    tab_yii = mod(i,n);
-    tab_xii = 1 + floor(i / n);
+    tab_yi = 1 + mod(j-1,n);
+    tab_xi = 1 + floor((j-1) / n);    
+    tab_yii = 1 + mod(i-1,n);
+    tab_xii = 1 + floor((i-1) / n);
     
     xi =  (tab_xi - 1) * dx;
     yj =  (tab_yi - 1) * dy;
@@ -36,7 +36,7 @@ for j = 1 : M
 end
 end
 
-%%µü´úÇó½â
+%%ÂµÃ¼Â´ÃºÃ‡Ã³Â½Ã¢
 % %*********************************************************
 % iter = 140;
 % %**********************************************************
